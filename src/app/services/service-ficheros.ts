@@ -10,7 +10,8 @@ export class ServiceFicheros {
     constructor(private http: HttpClient) { }
 
     subirArchivo(fichero: Fichero): Promise<any> {
-        let url = "https://apipostfiles.azurewebsites.net/UploadFiles/SubirFichero"
+        let url =
+            "https://apipostfiles.azurewebsites.net/api/TestingFiles";
         return firstValueFrom(this.http.post(url, fichero));
 
     }
